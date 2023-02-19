@@ -4,38 +4,39 @@
         <link href="./style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="header" style="text-align: center; font-family: Helvetica, Arial, sans-serif; background-color: green; color: white;">
+        <div id="header">
             <h1>
                 Problem Solve Count
             </h1>
         </div>
-        <div>
-            <form>
-                <div style="display: grid; grid-template-columns: auto auto auto auto; justify-content: space-around;">
-                <button type="button" id="ps+1" onclick="problemSolve1();displayCount()">
-                    LShift: +1 Problem Solve
-                </button>
-                <button type="button" id="dmg+1" onclick="damages1();displayCount()">
-                    RShift: +1 Damages
-                </button>
-                <button type="button" id="ps+5" onclick="problemSolve5();displayCount()">
-                    Z: +5 Problem Solve
-                </button>
-                <button type="button" id="dmg+5" onclick="damages5();displayCount()">
-                    /: +5 Damages
-                </button>
-                <button type="button" id="copyCount" onclick="copyToClipboard();displayCount()">
-                    Space: Copy Count to Clipboard
-                </button>
-            </form>
+        <div class="OuterContainer">
+            
+                <div id="buttons">
+                    <button type="button" id="ps+1" onclick="problemSolve1();displayCount()">
+                        +1&nbspProblem&nbspSolve<br>(LShift)
+                    </button>
+                    <button type="button" id="dmg+1" onclick="damages1();displayCount()">
+                        +1&nbspDamages<br>(RShift)
+                    </button>
+                    <button type="button" id="ps+5" onclick="problemSolve5();displayCount()">
+                        +5&nbspProblem&nbspSolve<br>(Z)
+                    </button>
+                    <button type="button" id="dmg+5" onclick="damages5();displayCount()">
+                        +5&nbspDamages<br>(/)
+                    </button>
+                    <button type="button" id="copyCount" onclick="copyToClipboard();displayCount()">
+                        Copy&nbspCount&nbspto&nbspClipboard<br>(Space)
+                    </button>
+                </div>
+            
         </div>
-        <div style="display: grid; grid-template-columns: auto auto auto;">
-            <div style="white-space: nowrap;">
+        <div>
+            <div>
                 <form>
-                    <p>
-                        <span style="display: inline-block;">
+                    <div id="display">
+                        <div id="floorSelect">
                             <label name="floor">Floor:</label>
-                            <select id="floor" name="floor" style="width: 50px;">
+                            <select id="floor" name="floor">
                                 <option>  </option>
                                 <option>1W</option>
                                 <option>2W</option>
@@ -46,10 +47,16 @@
                                 <option>3E</option>
                                 <option>4E</option>
                             </select>      
-                        </span>
-                        <span id="psCount" style="display: inline-block;"></span>
-                        <span id="dmgCount" style="display: inline-block;"></span>
-                    </p>
+                        </div>
+                        <label name="problemsolve">Problem Solve</label>
+                        <label name="damages">Damages</label>
+                        <div class="counts" name="problemsolve">
+                            <div id="psCount"></div>
+                        </div>
+                        <div class="counts" name="damages">
+                            <div id="dmgCount"></div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

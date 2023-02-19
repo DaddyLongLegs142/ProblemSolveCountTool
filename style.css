@@ -1,7 +1,98 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+.OuterContainer {
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 50%;
+}
+
+select {
+    width:fit-content;
+}
+
 button[type=button] {
-    background-color: darkblue;
+    background-color: darkslategray;
     color: white;
     border: none;
     font-size: large;
+    padding: 3%;
+    margin-top: 5%;
+}
+
+button[type=button]:hover {
+    opacity: .8;
+}
+
+*[name="problemsolve"] {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    justify-content: space-between;
+}
+
+*[name="damages"] {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
     align-content: center;
+    background-color: green;
+    color: white;
+    height: 100px;
+}
+
+#buttons {
+    display: grid; 
+    grid-template-columns: 40% 40%; 
+    justify-content: space-around;
+    align-content: center;
+    min-width: 200px;
+    max-width: 600px;
+}
+
+#floor:hover {
+    opacity: .5;
+}
+
+#copyCount {
+    background-color: darkblue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#display {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#floorSelect {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+div.counts {
+    display: flex;
+    background-color: gray;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 180%;
 }

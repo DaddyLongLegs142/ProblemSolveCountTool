@@ -3,8 +3,8 @@ let dmg = 0;
 
 function displayCount() {
     // document.getElementById("floor").innerHTML = '';
-    document.getElementById("psCount").innerHTML = `ps ${ps}, `;
-    document.getElementById("dmgCount").innerHTML = `dmg ${dmg}`;
+    document.getElementById("psCount").innerHTML = `${ps}`;
+    document.getElementById("dmgCount").innerHTML = `${dmg}`;
 }
 function problemSolve1() {
     ps++;
