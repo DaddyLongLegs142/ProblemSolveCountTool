@@ -20,7 +20,7 @@ function damages5() {
 }
 function copyToClipboard() {
     navigator.clipboard.writeText(
-        `${document.getElementById("floor").value}: ps ${ps}, dmg ${dmg}`
+        `${document.getElementById("floor").value}: ${ps} ps, ${dmg} dmg`
     );
     window.alert('Count copied to clipboard');
 }
