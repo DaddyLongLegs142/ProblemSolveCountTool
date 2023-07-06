@@ -25,7 +25,7 @@ function copyToClipboard() {
     window.alert('Count copied to clipboard');
 }
 function checkKeyPressed(evt) {
-    // console.log(evt.code);
+    console.log(evt.code);
     switch(evt.code) {
         case 'ShiftLeft':
             problemSolve1();
